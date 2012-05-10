@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<hero>
+	<filePath id="logging" value="/HeroContent/config/logging.xml" />
+	<filePath id="data" value="/HeroContent/config/data.xml" />
+	<filePath id="services" value="/HeroContent/config/services.xml" />
+	<filePath id="operations" value="HeroContent/operations/" />
+	<factory id="factory1" >
+		<initializer class="test.initializer.HeroInitializer"/>
+		<accessManager class="test.access.HeroAccessManager" />
+	</factory>
+	<factory id="factory2">
+	</factory>
+</hero>

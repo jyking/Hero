@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<data.xml>
+	<data id="factory1">
+		<kColl>
+			<field id="s_customerId"/>
+			<kColl id="LianaSettings">
+				<field id="appCertType" value="SIMCB"/>
+				<field id="enableLogonControl" value="true"/>
+				<field id="serverAddress" value="127.0.0.1:80"/>
+				<field id="signOffServlet" value="/corporbank/userSignOff.do"/>
+				<field id="productMode" value="false"/>
+				<field id="enableScriptFilter" value="true"/>
+			</kColl>
+		</kColl>
+		<service id="transactionManager"/>
+		<service id="HttpConnectionPool"/>
+		<service id="JDBCProcedure"/>
+		<service id="ebank_ds"/>
+	</data>
+	<data id="factory2">
+		<kColl id="factory2">
+			<field id="s_customerId"/>
+			<field id="s_customerName"/>
+			<field id="s_customerHostNo"/>
+			<field id="s_userId"/>
+			<field id="s_userName"/>
+			<field id="s_userNickName"/>
+			<field id="s_groupFlag"/>
+			<field id="s_rootMenu"/>
+			<field id="sessionId"/>
+			<field id="s_authId"/>
+			<field id="s_eauId"/>
+			<field id="s_openNode"/>
+			<field id="s_rootContextRole"/>
+		</kColl>
+		<service id="ebank_ds"/>
+	</data>
+</data.xml>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+
+<dsesrvce.XML>
+	<DataSourceTransactionManager id="transactionManager" implClass="com.ecc.emp.transaction.DataSourceTransactionManager"/>
+	<ProcedureAccessService id="JDBCProcedure" access="common" implClass="com.ecc.emp.jdbc.procedure.ProcedureAccessService" opClass="com.ecc.emp.jdbc.procedure.ProcedureOpForOracle">
+		<document>访问存储过程服务</document>
+	</ProcedureAccessService>
+	<HttpResource id="HttpConnectionPool" implClass="com.ecc.emp.comm.http.HttpResource">
+		<document>新中台通讯服务</document>
+		<HttpCommService implClass="com.ecc.emp.comm.http.HttpCommService" httpURL="http://10.48.8.180:8085/Gateway/ReqServlet" maxConnection="100" reqMethod="POST"/>
+	</HttpResource>
+	<JNDIDataSource id="ebank_ds" access="common" implClass="com.ecc.emp.jdbc.JNDIDataSource" jndiName="java:comp/env/jdbc/ebank_ds">
+		<document>关于：init_ctx_factory 使用Tomcat : init_ctx_factory="" 使用WebSphere : init_ctx_factory="com.ibm.websphere.naming.WsnInitialContextFactory" 使用WebLogic : init_ctx_factory="weblogic.jndi.WLInitialContextFactory"</document>
+	</JNDIDataSource>
+	<BeaFlowAccessManager id="accessManager" implClass="com.hkbea.cp.accessmanager.BeaFlowAccessManager">
+		<document>签名验签</document>
+	</BeaFlowAccessManager>
+	<JDBCProcedureDefine id="pub_querySampleNo" procedureName="CB_SAMPLE_MANAGE.QUERY_SAMPLE_NUM" access="common">
+		<document/>
+			<input>
+				<param idx="1" dataName="s_customerId" dataType="VARCHAR"/>
+				<param idx="2" dataName="s_userId" dataType="VARCHAR"/>
+			</input>
+			<output>
+				<param idx="1" dataName="exampleNo" dataType="VARCHAR"/>
+				<param idx="2" dataName="procRetCode" dataType="VARCHAR"/>
+			</output>
+	</JDBCProcedureDefine>
+</dsesrvce.XML>

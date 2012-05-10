@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<SelfDefinedOp.xml id="flowId">
+	<EMPBusinessLogic id="flowId" operationContext="flowIdSrvCtx">
+		<operation name="添加交易用途">
+			<input>
+				<field id="customerNo" type="" />
+			</input>
+			<output>
+				<field id="payPurpose" type="" />
+			</output>
+			<flow>
+				<action id="StartAction0" implClass="com.ecc.emp.flow.EMPStartAction">
+					<transition dest="ProcedureAccess0"/>
+				</action>
+				<action id="EndAction0" implClass="com.ecc.emp.flow.EMPEndAction"/>
+				<action id="ProcedureAccess0" implClass="com.ecc.liana.action.ProcedureAccessAction" throwException="true" label="添加" transactionType="TRX_REQUIRED" dataSource="ebank_ds" procedureDefine="addPaypurpose">
+					<transition dest="EndAction0"/>
+				</action>
+			</flow>
+		</operation>
+	</EMPBusinessLogic>
+	<context id="flowIdSrvCtx" type="op">
+		<refKColl refId="flowIdSrvCtxSrvData"/>
+		<refService alias="addPaypurpose" type="prv" refId="addPaypurpose"/>
+	</context>
+	<kColl id="flowIdSrvCtxSrvData">
+		<field id="errorCode"/>
+		<field id="errorMsg"/>
+		<field id="procRetCode"/>
+		<field id="EMPException"/>
+		<iColl id="iHostReturnMsg">
+			<kColl>
+				<field id="hostReturnCode"/>
+				<field id="hostErrorMessage"/>
+			</kColl>
+		</iColl>
+		<field id="customerNo" value="1004645301"/>
+		<field id="payPurpose"/>
+		<iColl id="paypurposeList">
+			<kColl>
+				<field id="purposeNo"/>
+				<field id="customerNo"/>
+				<field id="payPurpose"/>
+			</kColl>
+		</iColl>
+		<field id="purposeNo"/>
+		<field id="turnPageBeginPos" />
+		<field id="turnPageShowNum" />
+		<field id="turnPageTotalNum"/>
+	</kColl>
+	<JDBCProcedureDefine id="addPaypurpose" implClass="com.ecc.emp.jdbc.procedure.JDBCProcedureDefine" access="private" retCodeName="procRetCode" procedureName="CCT0201.CB_PAYPURPOSE_ADD">
+	</JDBCProcedureDefine>
+</SelfDefinedOp.xml>
