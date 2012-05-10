@@ -2,7 +2,7 @@ package cn.com.kk.exception;
 
 /**
  * ObjectNotFoundException.java<br>
- * ¶ÔÏóÕÒ²»µ½Òì³£¶¨Òå
+ * å¯¹è±¡æ‰¾ä¸åˆ°å¼‚å¸¸å®šä¹‰
  * 
  * @author tuqiang<br>
  * @since 2012-4-20<br>

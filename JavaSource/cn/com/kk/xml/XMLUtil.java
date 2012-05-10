@@ -8,7 +8,7 @@ import org.w3c.dom.NodeList;
 
 /**
  * XMLUtil.java<br>
- * XML¹¤¾ßÀà,Ìá¹©XML¼ìË÷µÈ·şÎñ
+ * XMLå·¥å…·ç±»,æä¾›XMLæ£€ç´¢ç­‰æœåŠ¡
  * 
  * @author tuqiang<br>
  * @since 2012-5-7<br>
@@ -17,7 +17,7 @@ import org.w3c.dom.NodeList;
 public class XMLUtil {
 
 	/**
-	 * ´ÓXML Document ÖĞ²éÕÒÖ¸¶¨IDµÄ½Úµã(ElementNode)
+	 * ä»XML Document ä¸­æŸ¥æ‰¾æŒ‡å®šIDçš„èŠ‚ç‚¹(ElementNode)
 	 * 
 	 * @param doc
 	 * @param id
@@ -44,7 +44,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ²éÕÒ½ÚµãÖĞÖ¸¶¨ÊôĞÔµÄÖµ
+	 * æŸ¥æ‰¾èŠ‚ç‚¹ä¸­æŒ‡å®šå±æ€§çš„å€¼
 	 * 
 	 * @param attrName
 	 * @param node
@@ -74,7 +74,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´ÓXML Document ÖĞ²éÕÒÖ¸¶¨ID¼°½ÚµãÃû³ÆµÄ½Úµã(ElementNode)
+	 * ä»XML Document ä¸­æŸ¥æ‰¾æŒ‡å®šIDåŠèŠ‚ç‚¹åç§°çš„èŠ‚ç‚¹(ElementNode)
 	 * 
 	 * @param doc
 	 * @param nodeName
@@ -107,7 +107,7 @@ public class XMLUtil {
 	}
 
 	/**
-	 * ´ÓNODEÖĞ²éÕÒÖ¸¶¨½ÚµãÃû³ÆµÄ½Úµã
+	 * ä»NODEä¸­æŸ¥æ‰¾æŒ‡å®šèŠ‚ç‚¹åç§°çš„èŠ‚ç‚¹
 	 * 
 	 * @param node
 	 * @param nodeName

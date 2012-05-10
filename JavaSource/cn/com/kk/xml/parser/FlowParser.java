@@ -8,7 +8,7 @@ import cn.com.kk.flow.Flow;
 
 /**
  * FlowParser.java<br>
- * FLOW×é¼ş½âÎöÆ÷
+ * FLOWç»„ä»¶è§£æå™¨
  * 
  * @author tuqiang<br>
  * @since 2012-5-9<br>
@@ -31,7 +31,7 @@ public class FlowParser extends ComponentParser {
 
 	public Flow createFlow(Document doc)
 	{
-		// TODO ´´½¨FLOW
+		// TODO åˆ›å»ºFLOW
 		return null;
 	}
 

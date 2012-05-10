@@ -25,7 +25,7 @@ public class Server {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(TSimpleServer.class.getName());
 
-	//ÈÕÖ¾³õÊ¼»¯
+	//æ—¥å¿—åˆå§‹åŒ–
 	static
 	{
 		DOMConfigurator.configure(System.getProperty("user.dir")+"\\HeroContent\\config\\logging.xml");

@@ -2,7 +2,7 @@ package cn.com.kk.exception;
 
 /**
  * HException.java<br>
- * HEROϵͳ�е��쳣��װ����������HERO�쳣�ĸ��࣬�����ڲ����������Աcause���� ���������г����쳣ʱ�Ķ��η�װ�����ⶪʧ��Ҫ����Ϣ
+ * HERO系统中的异常封装，他是所有HERO异常的父类，在它内部包含了类成员cause用于 对在运行中出现异常时的二次封装，避免丢失必要的信息
  * 
  * @author tuqiang<br>
  * @since 2012-4-20<br>
@@ -16,17 +16,17 @@ public class HException extends Exception {
 	private static final long serialVersionUID = 4842267182569970959L;
 
 	/**
-	 * ������, 20000 ϵͳ�ڲ�����
+	 * 错误码, 20000 系统内部错误
 	 */
 	private String errorCode = "20000";
 
 	/**
-	 * ��ʾ���û��Ĵ�����Ϣ�������Ƕ�������Դ�е���ԴID
+	 * 显示给用户的错误信息，可以是多语言资源中的资源ID
 	 */
 	private String showMessage;
 
 	/**
-	 * ������쳣�������쳣��ͨ���ڶ�ϵͳ�������׳��쳣���ж��η�װʱʹ��
+	 * 引起此异常的真正异常，通常在对系统运行中抛出异常进行二次封装时使用
 	 */
 	private Throwable cause;
 

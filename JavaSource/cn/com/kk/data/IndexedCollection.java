@@ -11,7 +11,7 @@ import org.slf4j.LoggerFactory;
 
 /**
  * IndexedCollection.java<br>
- * ¶àÌõÊı¾İ¼¯ºÏµÄÊµÏÖÀà£¬´ú±íÊı×éÀàĞÍµÄÊı¾İ¶¨Òå£¬Êı×éÖĞµÄÃ¿Ìõ¼ÇÂ¼ÓÖÊÇ Êı¾İ½á¹¹Êı¾İ¡£
+ * å¤šæ¡æ•°æ®é›†åˆçš„å®ç°ç±»ï¼Œä»£è¡¨æ•°ç»„ç±»å‹çš„æ•°æ®å®šä¹‰ï¼Œæ•°ç»„ä¸­çš„æ¯æ¡è®°å½•åˆæ˜¯ æ•°æ®ç»“æ„æ•°æ®ã€‚
  * 
  * @author tuqiang<br>
  * @since 2012-4-21<br>
@@ -22,12 +22,12 @@ public class IndexedCollection extends DataElement implements List {
 	private static final Logger LOGGER = LoggerFactory.getLogger(IndexedCollection.class.getName());
 
 	/**
-	 * Êı¾İ¼ÇÂ¼¶¨Òå
+	 * æ•°æ®è®°å½•å®šä¹‰
 	 */
 	private DataElement dataElement;
 
 	/**
-	 * Êı×éÖĞµÄÊı¾İÁĞ±í
+	 * æ•°ç»„ä¸­çš„æ•°æ®åˆ—è¡¨
 	 */
 	private List datas;
 
@@ -44,7 +44,7 @@ public class IndexedCollection extends DataElement implements List {
 	}
 
 	/**
-	 * È¡µÃµÚidxÌõÊı¾İ¼ÇÂ¼£¨´Ó0¿ªÊ¼£©
+	 * å–å¾—ç¬¬idxæ¡æ•°æ®è®°å½•ï¼ˆä»0å¼€å§‹ï¼‰
 	 * 
 	 * @param idx
 	 * @return cn.com.kk.core.DataElement
@@ -76,7 +76,7 @@ public class IndexedCollection extends DataElement implements List {
 	}
 
 	/**
-	 * Êı¾İ¼ÇÂ¼ÌõÊı
+	 * æ•°æ®è®°å½•æ¡æ•°
 	 * 
 	 * @return int
 	 */
@@ -86,7 +86,7 @@ public class IndexedCollection extends DataElement implements List {
 	}
 
 	/**
-	 * É¾³ıµÚidxÌõÊı¾İ
+	 * åˆ é™¤ç¬¬idxæ¡æ•°æ®
 	 * 
 	 * @param idx
 	 * @return cn.com.kk.core.DataElement
@@ -100,7 +100,7 @@ public class IndexedCollection extends DataElement implements List {
 	}
 
 	/**
-	 * Çå³ıËùÓĞÊı¾İ¼ÇÂ¼
+	 * æ¸…é™¤æ‰€æœ‰æ•°æ®è®°å½•
 	 * 
 	 */
 	public void removeAll()
@@ -109,7 +109,7 @@ public class IndexedCollection extends DataElement implements List {
 	}
 
 	/**
-	 * Ìí¼ÓÊı¾İ¼ÇÂ¼
+	 * æ·»åŠ æ•°æ®è®°å½•
 	 * 
 	 * @param element
 	 */
@@ -123,7 +123,7 @@ public class IndexedCollection extends DataElement implements List {
 	}
 
 	/**
-	 * Éè¶¨Êı¾İ¼ÇÂ¼¶¨Òå
+	 * è®¾å®šæ•°æ®è®°å½•å®šä¹‰
 	 * 
 	 * @param element
 	 */
@@ -134,7 +134,7 @@ public class IndexedCollection extends DataElement implements List {
 	}
 
 	/**
-	 * È¡Êı¾İ¼ÇÂ¼¶¨Òå
+	 * å–æ•°æ®è®°å½•å®šä¹‰
 	 * 
 	 * @return
 	 */

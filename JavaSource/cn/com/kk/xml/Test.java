@@ -10,7 +10,7 @@ import cn.com.kk.data.HConstants;
 
 /**
  * Test.java<br>
- * ²âÊÔÀà
+ * æµ‹è¯•ç±»
  * 
  * @author tuqiang<br>
  * @since 2012-5-7<br>
@@ -21,7 +21,7 @@ public class Test {
 	public static void main(String[] args) throws Exception
 	{
 		XMLDocumentLoader loader = new XMLDocumentLoader();
-		Document document = loader.loadXMLDocument("D:\\¿ìÅÌ\\Project\\Hero\\HeroContent\\config\\hero.xml");
+		Document document = loader.loadXMLDocument("D:\\å¿«ç›˜\\Project\\Hero\\HeroContent\\config\\hero.xml");
 		Node node = XMLUtil.findElementNode(document, "factory1");
 		Node n2 = XMLUtil.findElementNode(document, "factory1", "factory1");
 		

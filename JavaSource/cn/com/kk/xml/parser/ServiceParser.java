@@ -6,7 +6,7 @@ import cn.com.kk.factory.ComponentFactory;
 
 /**
  * ServiceParser.java<br>
- * SERVICE½âÎöÆ÷
+ * SERVICEè§£æå™¨
  *
  * @author tuqiang<br>
  * @since 2012-5-10<br>
@@ -22,7 +22,7 @@ public class ServiceParser extends ComponentParser {
 
 	public T parseTheElement(Node elementNode) throws Exception
 	{
-		// TODO ·µ»Ø·şÎñÊµÀı
+		// TODO è¿”å›æœåŠ¡å®ä¾‹
 		return null;
 	}
 

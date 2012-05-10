@@ -2,7 +2,7 @@ package cn.com.kk.tools;
 
 /**
  * HTools.java<br>
- * ÏµÍ³¹¤¾ßÀà
+ * ç³»ç»Ÿå·¥å…·ç±»
  * 
  * @author tuqiang<br>
  * @since 2012-5-8<br>
@@ -11,11 +11,11 @@ package cn.com.kk.tools;
 public class HTools {
 
 	/**
-	 * ÏµÍ³¹¤¾ß
+	 * ç³»ç»Ÿå·¥å…·
 	 */
 	public static class Sys {
 		/**
-		 * »ñÈ¡ÏµÍ³¸üÂ·¾¶
+		 * è·å–ç³»ç»Ÿæ›´è·¯å¾„
 		 * 
 		 * @return
 		 */
@@ -25,7 +25,7 @@ public class HTools {
 		}
 
 		/**
-		 * »ñÈ¡ÏµÍ³ÎÄ¼ş·Ö¸ô·û
+		 * è·å–ç³»ç»Ÿæ–‡ä»¶åˆ†éš”ç¬¦
 		 * @return
 		 */
 		public static String getFileSeparator()

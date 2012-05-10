@@ -5,8 +5,8 @@ import cn.com.kk.exception.HException;
 
 /**
  * DefAccessManager.java<br>
- * Ä¬ÈÏ·ÃÎÊ¿ØÖÆÆ÷
- * Ä¬ÈÏ²»×öÈÎºÎ¿ØÖÆ
+ * é»˜è®¤è®¿é—®æ§åˆ¶å™¨
+ * é»˜è®¤ä¸åšä»»ä½•æ§åˆ¶
  *
  * @author tuqiang<br>
  * @since 2012-5-7<br>

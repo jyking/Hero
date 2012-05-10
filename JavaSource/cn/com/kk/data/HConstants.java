@@ -2,7 +2,7 @@ package cn.com.kk.data;
 
 /**
  * HConstants.java<br>
- * ÏµÍ³³£Á¿Àà
+ * ç³»ç»Ÿå¸¸é‡ç±»
  * 
  * @author tuqiang<br>
  * @since 2012-5-7<br>
@@ -12,52 +12,52 @@ public class HConstants {
 
 	private HConstants()
 	{
-		// ½ûÓÃ¹¹Ôìº¯Êı
+		// ç¦ç”¨æ„é€ å‡½æ•°
 	}
 
 	/**
-	 * FACTORY XMLÅäÖÃ
+	 * FACTORY XMLé…ç½®
 	 */
 	public static class XML_Factory {
 		/**
-		 * ÈİÆ÷³õÊ¼»¯½Úµã
+		 * å®¹å™¨åˆå§‹åŒ–èŠ‚ç‚¹
 		 */
 		public static final String ID_INIT = "initializer";
 
 		/**
-		 * ·ÃÎÊ¿ØÖÆÆ÷½Úµã
+		 * è®¿é—®æ§åˆ¶å™¨èŠ‚ç‚¹
 		 */
 		public static final String ID_ACCESS = "accessManager";
 
 		/**
-		 * ÊµÏÖÀàÊôĞÔ
+		 * å®ç°ç±»å±æ€§
 		 */
 		public static final String PROPERTY_CLASS = "class";
 
 		/**
-		 * ÅäÖÃÎÄ¼şÂ·¾¶½ÚµãÃû³Æ
+		 * é…ç½®æ–‡ä»¶è·¯å¾„èŠ‚ç‚¹åç§°
 		 */
 		public static final String NODE_FILEPATH = "filePath";
 
 		/**
-		 * ½ÚµãÖµ
+		 * èŠ‚ç‚¹å€¼
 		 */
 		public static final String PROPERTY_VALUE = "value";
 
 		/**
-		 * FLOW Á÷³Ì´æ·ÅÂ·¾¶½ÚµãID
+		 * FLOW æµç¨‹å­˜æ”¾è·¯å¾„èŠ‚ç‚¹ID
 		 */
 		public static final String ID_OPERATIONS = "operations";
 		
 		/**
-		 * XML IDÊôĞÔ
+		 * XML IDå±æ€§
 		 */
 		public static final String PROPERTY_ID = "id";
 
 	}
 
 	/**
-	 * CONTEXT XMLÅäÖÃ
+	 * CONTEXT XMLé…ç½®
 	 */
 	public static class XML_Context {
 		public static final String NODE_DATA = "data";
@@ -70,23 +70,23 @@ public class HConstants {
 	}
 
 	/**
-	 * HEROÏµÍ³ÅäÖÃ
+	 * HEROç³»ç»Ÿé…ç½®
 	 * 
 	 */
 	public static class HSettings {
 		/**
-		 * data.xmlÎÄ¼şÅäÖÃID
+		 * data.xmlæ–‡ä»¶é…ç½®ID
 		 */
 		public static final String SET_DATA = "data";
 
 		/**
-		 * services.xmlÎÄ¼şÅäÖÃ
+		 * services.xmlæ–‡ä»¶é…ç½®
 		 */
 		public static final String SET_SERVER = "services";
 	}
 
 	/**
-	 * BEAN×¢ÈëXML³£Á¿
+	 * BEANæ³¨å…¥XMLå¸¸é‡
 	 */
 	public static class ImpClass {
 		public static String SET_ATTR_METHOD = "setAttributes";

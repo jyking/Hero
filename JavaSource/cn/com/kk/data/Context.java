@@ -13,10 +13,10 @@ import cn.com.kk.service.Service;
 
 /**
  * Context.java<br>
- * ÒµÎñÂß¼­¶¨ÒåÊ¹ÓÃµÄ×ÊÔ´ÉÏÏÂÎÄ¶¨Òå£¬Í¨¹ıËüÊµÏÖ¶ÔÒµÎñÂß¼­´¦Àí¶¨ÒåÖĞÉæ¼°µÄÊı¾İ¶¨ÒåµÄ·ÃÎÊ£¬
- * ÒÔ¼°·şÎñµÄ·ÃÎÊ¡£ËüÊÇÒ»¿ÅÊ÷ĞÎ½á¹¹£¬Í¨¹ıÊ÷ĞÎµÄ½á¹¹£¬ÊµÏÖ¹«ÓĞ×ÊÔ´µÄ¹²Ïí·ÃÎÊ£¬
- * Ò²¾ÍÊÇÔÚÒ¶×Ó½ÚµãÉÏµÄContext¿ÉÒÔ·ÃÎÊµ½¸¸½ÚµãÉÏµÄ×ÊÔ´¡£±ÈÈç£ºgetDataValueµÄ·½·¨£¬Ê×ÏÈ´Ó±¾½Úµã
- * ²éÕÒÊÇ·ñÓĞ´ËÊı¾İ¶¨Òå£¬Èç¹ûÃ»ÓĞ£¬ÔòÔÚ¸¸½Úµã²éÕÒ¡£
+ * ä¸šåŠ¡é€»è¾‘å®šä¹‰ä½¿ç”¨çš„èµ„æºä¸Šä¸‹æ–‡å®šä¹‰ï¼Œé€šè¿‡å®ƒå®ç°å¯¹ä¸šåŠ¡é€»è¾‘å¤„ç†å®šä¹‰ä¸­æ¶‰åŠçš„æ•°æ®å®šä¹‰çš„è®¿é—®ï¼Œ
+ * ä»¥åŠæœåŠ¡çš„è®¿é—®ã€‚å®ƒæ˜¯ä¸€é¢—æ ‘å½¢ç»“æ„ï¼Œé€šè¿‡æ ‘å½¢çš„ç»“æ„ï¼Œå®ç°å…¬æœ‰èµ„æºçš„å…±äº«è®¿é—®ï¼Œ
+ * ä¹Ÿå°±æ˜¯åœ¨å¶å­èŠ‚ç‚¹ä¸Šçš„Contextå¯ä»¥è®¿é—®åˆ°çˆ¶èŠ‚ç‚¹ä¸Šçš„èµ„æºã€‚æ¯”å¦‚ï¼šgetDataValueçš„æ–¹æ³•ï¼Œé¦–å…ˆä»æœ¬èŠ‚ç‚¹
+ * æŸ¥æ‰¾æ˜¯å¦æœ‰æ­¤æ•°æ®å®šä¹‰ï¼Œå¦‚æœæ²¡æœ‰ï¼Œåˆ™åœ¨çˆ¶èŠ‚ç‚¹æŸ¥æ‰¾ã€‚
  * 
  * @author tuqiang<br>
  * @since 2012-4-20<br>
@@ -27,39 +27,39 @@ public class Context implements Serializable {
 	private String name;
 
 	/**
-	 * Á¬½Óµ½´Ë½ÚµãµÄËùÓĞ×Ó½Úµã
+	 * è¿æ¥åˆ°æ­¤èŠ‚ç‚¹çš„æ‰€æœ‰å­èŠ‚ç‚¹
 	 */
 	private List childs;
 
 	/**
-	 * ¸¸½ÚµãContext
+	 * çˆ¶èŠ‚ç‚¹Context
 	 */
 	private Context parent;
 
 	/**
-	 * ´Ë½ÚµãÉÏ¶¨ÒåµÄÊı¾İÄ£ĞÍ£¬Ó¦¸ÃÊÇKeyedCollection
+	 * æ­¤èŠ‚ç‚¹ä¸Šå®šä¹‰çš„æ•°æ®æ¨¡å‹ï¼Œåº”è¯¥æ˜¯KeyedCollection
 	 */
 	private DataElement dataElement;
 
 	/**
-	 * ½ÚµãÉÏ¶¨ÒåµÄËùÓĞ·şÎñ
+	 * èŠ‚ç‚¹ä¸Šå®šä¹‰çš„æ‰€æœ‰æœåŠ¡
 	 */
 	private Map services;
 
 	/**
-	 * ÓÃÓÚ±£´æÓÃ»§×Ô¶¨ÒåµÄ¶ÔÏó
+	 * ç”¨äºä¿å­˜ç”¨æˆ·è‡ªå®šä¹‰çš„å¯¹è±¡
 	 */
 	private Map attributes;
 
 	/**
-	 * Format ¶¨Òå
+	 * Format å®šä¹‰
 	 */
 	private Map formats;
 
 	private String parentContextName;
 
 	/**
-	 * ¹¹ÔìÒ»¸ö¿ÕµÄContext
+	 * æ„é€ ä¸€ä¸ªç©ºçš„Context
 	 */
 	public Context()
 	{
@@ -83,7 +83,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * Á´½Óµ½Ä³¸ö¸¸Context½ÚµãÉÏ
+	 * é“¾æ¥åˆ°æŸä¸ªçˆ¶ContextèŠ‚ç‚¹ä¸Š
 	 * 
 	 * @param context
 	 */
@@ -94,10 +94,10 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * ²éÕÒIDÎªnameµÄÊı¾İ¶¨Òå£¬Ê×ÏÈÔÚ±¾½ÚµãÄÚ²éÕÒ£¬Èç¹û²éÕÒ²»µ½£¬Ôò´ÓÆä¸¸½ÚµãÖĞ²éÕÒ
+	 * æŸ¥æ‰¾IDä¸ºnameçš„æ•°æ®å®šä¹‰ï¼Œé¦–å…ˆåœ¨æœ¬èŠ‚ç‚¹å†…æŸ¥æ‰¾ï¼Œå¦‚æœæŸ¥æ‰¾ä¸åˆ°ï¼Œåˆ™ä»å…¶çˆ¶èŠ‚ç‚¹ä¸­æŸ¥æ‰¾
 	 * 
 	 * @param name
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @return cn.com.kk.core.DataElement
 	 * @throws cn.com.kk.core.ObjectNotFoundException
 	 */
@@ -120,10 +120,10 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * È¡µÃIDÎªnameµÄÊı¾İ¶¨ÒåµÄÖµ£¬Ê×ÏÈÔÚ±¾½ÚµãÄÚ²éÕÒ£¬Èç¹û²éÕÒ²»µ½£¬Ôò´ÓÆä¸¸½ÚµãÖĞ²éÕÒ
+	 * å–å¾—IDä¸ºnameçš„æ•°æ®å®šä¹‰çš„å€¼ï¼Œé¦–å…ˆåœ¨æœ¬èŠ‚ç‚¹å†…æŸ¥æ‰¾ï¼Œå¦‚æœæŸ¥æ‰¾ä¸åˆ°ï¼Œåˆ™ä»å…¶çˆ¶èŠ‚ç‚¹ä¸­æŸ¥æ‰¾
 	 * 
 	 * @param name
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @return java.lang.Object
 	 * @deprecated
 	 */
@@ -133,10 +133,10 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * Éè¶¨IDÎªnameµÄÊı¾İ¶¨ÒåµÄÖµ£¬Ê×ÏÈ±¾½ÚµãÄÚ²éÕÒÊı¾İ²¢Éè¶¨ÆäÖµ£¬Èç¹û²éÕÒ²»µ½Ôò´Ó¸¸½Úµã²éÕÒ
+	 * è®¾å®šIDä¸ºnameçš„æ•°æ®å®šä¹‰çš„å€¼ï¼Œé¦–å…ˆæœ¬èŠ‚ç‚¹å†…æŸ¥æ‰¾æ•°æ®å¹¶è®¾å®šå…¶å€¼ï¼Œå¦‚æœæŸ¥æ‰¾ä¸åˆ°åˆ™ä»çˆ¶èŠ‚ç‚¹æŸ¥æ‰¾
 	 * 
 	 * @param name
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @param value
 	 * @deprecated
 	 */
@@ -146,10 +146,10 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * È¡µÃIDÎªnameµÄÊı¾İ¶¨ÒåµÄÖµ£¬Ê×ÏÈÔÚ±¾½ÚµãÄÚ²éÕÒ£¬Èç¹û²éÕÒ²»µ½£¬Ôò´ÓÆä¸¸½ÚµãÖĞ²éÕÒ
+	 * å–å¾—IDä¸ºnameçš„æ•°æ®å®šä¹‰çš„å€¼ï¼Œé¦–å…ˆåœ¨æœ¬èŠ‚ç‚¹å†…æŸ¥æ‰¾ï¼Œå¦‚æœæŸ¥æ‰¾ä¸åˆ°ï¼Œåˆ™ä»å…¶çˆ¶èŠ‚ç‚¹ä¸­æŸ¥æ‰¾
 	 * 
 	 * @param name
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @return java.lang.Object
 	 */
 	public Object getDataValue(String name) throws ObjectNotFoundException, InvalidArgumentException
@@ -163,10 +163,10 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * Éè¶¨IDÎªnameµÄÊı¾İ¶¨ÒåµÄÖµ£¬Ê×ÏÈ±¾½ÚµãÄÚ²éÕÒÊı¾İ²¢Éè¶¨ÆäÖµ£¬Èç¹û²éÕÒ²»µ½Ôò´Ó¸¸½Úµã²éÕÒ
+	 * è®¾å®šIDä¸ºnameçš„æ•°æ®å®šä¹‰çš„å€¼ï¼Œé¦–å…ˆæœ¬èŠ‚ç‚¹å†…æŸ¥æ‰¾æ•°æ®å¹¶è®¾å®šå…¶å€¼ï¼Œå¦‚æœæŸ¥æ‰¾ä¸åˆ°åˆ™ä»çˆ¶èŠ‚ç‚¹æŸ¥æ‰¾
 	 * 
 	 * @param name
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @param value
 	 */
 	public void setDataValue(String name, Object value) throws ObjectNotFoundException, InvalidArgumentException
@@ -182,7 +182,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * ÏòÊı¾İ¶¨ÒåÖĞÌí¼ÓÒ»¸öĞÂµÄÊı¾İÔªËØ£¬Èç¹ûÊı¾İÔªËØIDÖØ¸´½«Å×³öÒì³£
+	 * å‘æ•°æ®å®šä¹‰ä¸­æ·»åŠ ä¸€ä¸ªæ–°çš„æ•°æ®å…ƒç´ ï¼Œå¦‚æœæ•°æ®å…ƒç´ IDé‡å¤å°†æŠ›å‡ºå¼‚å¸¸
 	 * 
 	 * @param dataElement
 	 */
@@ -192,8 +192,8 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * ÏòÊı¾İ¶¨ÒåÖĞÌí¼ÓÒ»¸öĞÂµÄÊı¾İÔªËØÆäIDÎªnameÖµÎªvalue£¬ÏµÍ³½«´´½¨Ò»¸öĞÂµÄDataField¶ÔÏó²¢Ìí¼Óµ½Êı¾İ¶¨ÒåÖĞ£¬
-	 * Èç¹ûÊı¾İÔªËØIDÖØ¸´½«Å×³öÒì³£
+	 * å‘æ•°æ®å®šä¹‰ä¸­æ·»åŠ ä¸€ä¸ªæ–°çš„æ•°æ®å…ƒç´ å…¶IDä¸ºnameå€¼ä¸ºvalueï¼Œç³»ç»Ÿå°†åˆ›å»ºä¸€ä¸ªæ–°çš„DataFieldå¯¹è±¡å¹¶æ·»åŠ åˆ°æ•°æ®å®šä¹‰ä¸­ï¼Œ
+	 * å¦‚æœæ•°æ®å…ƒç´ IDé‡å¤å°†æŠ›å‡ºå¼‚å¸¸
 	 * 
 	 * @param name
 	 * @param value
@@ -206,7 +206,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * ½«IDÎªnameµÄÊı¾İ´ÓÊı¾İ¶¨ÒåÖĞÉ¾³ı
+	 * å°†IDä¸ºnameçš„æ•°æ®ä»æ•°æ®å®šä¹‰ä¸­åˆ é™¤
 	 * 
 	 * @param name
 	 */
@@ -217,7 +217,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * Éè¶¨ÓÃ»§×Ô¶¨ÒåµÄ¶ÔÏó£¬ÓÃÓÚ±£´æ»ò´«µİÓÃ»§¶¨Òå¶ÔÏó
+	 * è®¾å®šç”¨æˆ·è‡ªå®šä¹‰çš„å¯¹è±¡ï¼Œç”¨äºä¿å­˜æˆ–ä¼ é€’ç”¨æˆ·å®šä¹‰å¯¹è±¡
 	 * 
 	 * @param name
 	 * @param value
@@ -230,7 +230,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * È¡µÃÓÃ»§¶¨ÒåµÄ¶ÔÏó
+	 * å–å¾—ç”¨æˆ·å®šä¹‰çš„å¯¹è±¡
 	 * 
 	 * @param name
 	 * @return Object
@@ -244,7 +244,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * È¡Context¶ÔÓ¦µÄÊı¾İ¶¨ÒåÄ£ĞÍ
+	 * å–Contextå¯¹åº”çš„æ•°æ®å®šä¹‰æ¨¡å‹
 	 * 
 	 * @return cn.com.kk.core.DataElement
 	 */
@@ -259,7 +259,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * ¿ËÂ¡Ò»¸öĞÂµÄContext¶ÔÏó
+	 * å…‹éš†ä¸€ä¸ªæ–°çš„Contextå¯¹è±¡
 	 * 
 	 * @return Object
 	 */
@@ -276,7 +276,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * È¡µÃIDÎªserviceIdµÄ·şÎñ¶¨Òå¶ÔÏó£¬Ê×ÏÈÔÚ±¾½ÚµãÄÚ²éÕÒ£¬Èç¹û²éÕÒ²»µ½£¬Ôò´ÓÆä¸¸½Úµã²éÕÒ
+	 * å–å¾—IDä¸ºserviceIdçš„æœåŠ¡å®šä¹‰å¯¹è±¡ï¼Œé¦–å…ˆåœ¨æœ¬èŠ‚ç‚¹å†…æŸ¥æ‰¾ï¼Œå¦‚æœæŸ¥æ‰¾ä¸åˆ°ï¼Œåˆ™ä»å…¶çˆ¶èŠ‚ç‚¹æŸ¥æ‰¾
 	 * 
 	 * @param serviceId
 	 * @return com.ecc.emp.service.Service
@@ -298,7 +298,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * Ìí¼Ó·şÎñ¶¨Òå
+	 * æ·»åŠ æœåŠ¡å®šä¹‰
 	 * 
 	 * @param serviceId
 	 * @param service
@@ -358,7 +358,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * ±éÀúContextÊ÷£¬ÕÒµ½Ö¸¶¨IDµÄContext
+	 * éå†Contextæ ‘ï¼Œæ‰¾åˆ°æŒ‡å®šIDçš„Context
 	 * 
 	 * @param contextId
 	 * @return
@@ -385,7 +385,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * Ìí¼Ó×Ó½Úµã
+	 * æ·»åŠ å­èŠ‚ç‚¹
 	 * 
 	 * @param context
 	 */
@@ -400,7 +400,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * É¾³ı×Ó½Úµã
+	 * åˆ é™¤å­èŠ‚ç‚¹
 	 * 
 	 * @param context
 	 */
@@ -421,8 +421,8 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * ÖÕÖ¹´ËContext£¬Ê×ÏÈËü¶Ï¿ªÓë¸¸½áµãµÄÁ´½Ó£¬È»ºóÖğ¸öµôÓÃServiceµÄterminate·½·¨£¬
-	 * ½Ó×ÅµôÓÃËùÓĞÁ´½Óµ½´ËContextµÄ×ÓContextµÄterminate·½·¨
+	 * ç»ˆæ­¢æ­¤Contextï¼Œé¦–å…ˆå®ƒæ–­å¼€ä¸çˆ¶ç»“ç‚¹çš„é“¾æ¥ï¼Œç„¶åé€ä¸ªæ‰ç”¨Serviceçš„terminateæ–¹æ³•ï¼Œ
+	 * æ¥ç€æ‰ç”¨æ‰€æœ‰é“¾æ¥åˆ°æ­¤Contextçš„å­Contextçš„terminateæ–¹æ³•
 	 * 
 	 */
 	public void terminate()
@@ -481,7 +481,7 @@ public class Context implements Serializable {
 	}
 
 	/**
-	 * Éè¶¨Format¶¨Òå£¬ÄÚ²¿·½·¨£¬ÓÉFlowµ÷ÓÃ
+	 * è®¾å®šFormatå®šä¹‰ï¼Œå†…éƒ¨æ–¹æ³•ï¼Œç”±Flowè°ƒç”¨
 	 * 
 	 * @param fmts
 	 */

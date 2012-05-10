@@ -16,7 +16,7 @@ public interface Service {
 	public String getAlias();
 
 	/**
-	 * ÊÇ·ñÎ¨Ò»ÊµÀı»¯
+	 * æ˜¯å¦å”¯ä¸€å®ä¾‹åŒ–
 	 * 
 	 * @return
 	 */

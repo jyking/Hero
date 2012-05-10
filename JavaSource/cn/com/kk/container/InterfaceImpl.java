@@ -25,14 +25,14 @@ public class InterfaceImpl extends HeroContainer implements Iface {
 	@Override
 	public User queryUser(String userName) throws UserNotFound, TException
 	{
-		System.out.println("¿ªÊ¼²éÑ¯" + userName + "µÄĞÅÏ¢...");
+		System.out.println("å¼€å§‹æŸ¥è¯¢" + userName + "çš„ä¿¡æ¯...");
 		User user = new User();
-		user.name = "ÕÅĞ¡Èı";
+		user.name = "å¼ å°ä¸‰";
 		UserNotFound ex = new UserNotFound();
 		ex.code = "ECBC0001";
-		ex.msg = "Ã»ÓĞÕâ¸öÈË";
+		ex.msg = "æ²¡æœ‰è¿™ä¸ªäºº";
 		//throw ex;
-		if("ÕÅĞ¡Èı".equals(userName)){
+		if("å¼ å°ä¸‰".equals(userName)){
 			return user;
 		}else{
 			throw ex;
@@ -57,7 +57,7 @@ public class InterfaceImpl extends HeroContainer implements Iface {
 		school sc = new school();
 		sc.user = new User();
 		sc.addres = "123";
-		sc.user.name = "ÕÅÈı";
+		sc.user.name = "å¼ ä¸‰";
 		return sc;
 	}
 

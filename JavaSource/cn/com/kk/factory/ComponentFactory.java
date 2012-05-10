@@ -18,17 +18,17 @@ import cn.com.kk.xml.XMLDocumentLoader;
 public class ComponentFactory {
 
 	/**
-	 * ÒÑ¾­ÊµÀı»¯µÄ×é¼ş¹¤³§,ÔÊĞí¶à¸ö×é¼ş¹¤³§Í¬Ê±´æÔÚ
+	 * å·²ç»å®ä¾‹åŒ–çš„ç»„ä»¶å·¥å‚,å…è®¸å¤šä¸ªç»„ä»¶å·¥å‚åŒæ—¶å­˜åœ¨
 	 */
 	private static Map<String, ComponentFactory> factories;
 
 	/**
-	 * ¹¤³§Ãû³Æ
+	 * å·¥å‚åç§°
 	 */
 	private String name;
 	
 	/**
-	 * ·şÎñ
+	 * æœåŠ¡
 	 */
 	protected Map<String, Service> serviceCache;
 
@@ -40,7 +40,7 @@ public class ComponentFactory {
 	}
 
 	/**
-	 * ¼ÓÔØÅäÖÃÎÄ¼ş
+	 * åŠ è½½é…ç½®æ–‡ä»¶
 	 * @param fileName
 	 * @throws Exception
 	 */
@@ -69,7 +69,7 @@ public class ComponentFactory {
 	}
 
 	/**
-	 * È¡ÒÑ¾­ÊµÀı»¯µÄ×é¼ş¹¤³§.
+	 * å–å·²ç»å®ä¾‹åŒ–çš„ç»„ä»¶å·¥å‚.
 	 * 
 	 * @param name
 	 * @return com.ecc.emp.component.factory.ComponentFactory

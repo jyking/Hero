@@ -4,7 +4,7 @@ import cn.com.kk.factory.FlowComponentFactory;
 
 /**
  * Initializer.java<br>
- * ×é¼ş¹¤³§³õÊ¼»¯½Ó¿Ú
+ * ç»„ä»¶å·¥å‚åˆå§‹åŒ–æ¥å£
  * 
  * @author tuqiang<br>
  * @since 2012-4-25<br>

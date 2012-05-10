@@ -13,51 +13,51 @@ import cn.com.kk.service.Service;
 public interface Flow {
 
 	/**
-	 * 数据模型更新
+	 * 鏁版嵁妯″瀷鏇存柊
 	 * @param context
 	 */
 	public void modeUpdate( Context context );
 	
 	/**
-	 * 获取流程返回结果
+	 * 鑾峰彇娴佺▼杩斿洖缁撴灉
 	 * @return
 	 */
 	public Object getResult( Context context );
 	
 	/**
-	 * 流程结束施放资源
+	 * 娴佺▼缁撴潫鏂芥斁璧勬簮
 	 */
 	public void close();
 
 	/**
-	 * 执行OP流程
+	 * 鎵цOP娴佺▼
 	 * @param context
 	 * @return java.lang.String
 	 */
 	public String execute(Context context) throws Exception;
 
 	/**
-	 * 获取FLOW下的服务
+	 * 鑾峰彇FLOW涓嬬殑鏈嶅姟
 	 * @param serviceId
 	 * @return
 	 */
 	public Service getService(String serviceId);
 
 	/**
-	 * 获取ACTION流程
+	 * 鑾峰彇ACTION娴佺▼
 	 * @param name
 	 * @return
 	 */
 	public Action getAction(String name);
 
 	/**
-	 * 获取FLOW名称
+	 * 鑾峰彇FLOW鍚嶇О
 	 * @return
 	 */
 	public String getName();
 	
 	/**
-	 * 获取FLOW的CONTEXT模型
+	 * 鑾峰彇FLOW鐨凜ONTEXT妯″瀷
 	 * @return
 	 */
 	public Context getContext();

@@ -14,7 +14,7 @@ import cn.com.kk.xml.XMLUtil;
 
 /**
  * ContextParser.java<br>
- * CONTEXT½âÎöÆ÷
+ * CONTEXTè§£æå™¨
  * 
  * @author tuqiang<br>
  * @since 2012-5-10<br>
@@ -31,12 +31,12 @@ public class ContextParser extends ComponentParser {
 
 	public Object parseTheElement(Node elementNode) throws Exception
 	{
-		// TODO ·µ»Øfield»òÕßICOLL
+		// TODO è¿”å›fieldæˆ–è€…ICOLL
 		return null;
 	}
 
 	/**
-	 * ¸ù¾İXML´´½¨CONTEXTÊı¾İÄ£ĞÍ
+	 * æ ¹æ®XMLåˆ›å»ºCONTEXTæ•°æ®æ¨¡å‹
 	 * 
 	 * @param node
 	 * @return
@@ -45,8 +45,8 @@ public class ContextParser extends ComponentParser {
 	public Context createContextMode(Node node,String contextName) throws Exception
 	{
 		Context context = new Context();
-		// ½«NODEÄ£ĞÍ×ª»»ÎªCONTEXT
-		// ¼ÓÔØÊôĞÔÄ£ĞÍ
+		// å°†NODEæ¨¡å‹è½¬æ¢ä¸ºCONTEXT
+		// åŠ è½½å±æ€§æ¨¡å‹
 		Node dataNode = XMLUtil.findElementNode(node, HConstants.XML_Context.NODE_KCOLL);
 		NodeList dataList = dataNode.getChildNodes();
 		KeyedCollection kColl = new KeyedCollection(contextName);
@@ -67,7 +67,7 @@ public class ContextParser extends ComponentParser {
 		}
 		context.setDataElement(kColl);
 
-		// ¼ÓÔØ·şÎñ
+		// åŠ è½½æœåŠ¡
 		NodeList nList = node.getChildNodes();
 		for (int i = 0; i < nList.getLength(); i++)
 		{

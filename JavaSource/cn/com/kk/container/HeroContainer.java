@@ -11,7 +11,7 @@ import cn.com.kk.flow.Flow;
 
 /**
  * RequestContainer.java<br>
- * Hero¿ò¼ÜÈİÆ÷
+ * Heroæ¡†æ¶å®¹å™¨
  * 
  * @author tuqiang<br>
  * @since 2012-4-20<br>
@@ -22,26 +22,26 @@ public class HeroContainer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(HeroContainer.class.getName());
 
 	/**
-	 * FLOWÁ÷³Ì×é¼ş
+	 * FLOWæµç¨‹ç»„ä»¶
 	 */
 	private FlowComponentFactory flowFactory;
 
 	/**
-	 * ÈİÆ÷³õÊ¼»¯
+	 * å®¹å™¨åˆå§‹åŒ–
 	 * 
 	 * @param factoryName
 	 * @throws Exception
 	 */
 	public void initContainer(String factoryName, String fileName) throws Exception
 	{
-		// 1.0 ³õÊ¼»¯×é¼ş¹¤³§
+		// 1.0 åˆå§‹åŒ–ç»„ä»¶å·¥å‚
 		FlowComponentFactory flowFactory = new FlowComponentFactory();
 		flowFactory.initFlowComponentFactory(factoryName, fileName);
 		ComponentFactory.addComponentFactory(flowFactory);
 	}
 
 	/**
-	 * Ö´ĞĞFLOWÁ÷³Ì
+	 * æ‰§è¡ŒFLOWæµç¨‹
 	 * 
 	 * @param factoryName
 	 * @param flowId
@@ -49,9 +49,9 @@ public class HeroContainer {
 	 */
 	public Object service(String flowId)
 	{
-		Object result = null; // ·µ»ØÖµ
-		boolean access = false; // ·ÃÎÊ¿ØÖÆ¿ª¹Ø
-		long beginTimeStamp = System.currentTimeMillis(); // ½»Ò×¿ªÊ¼Ê±¼ä
+		Object result = null; // è¿”å›å€¼
+		boolean access = false; // è®¿é—®æ§åˆ¶å¼€å…³
+		long beginTimeStamp = System.currentTimeMillis(); // äº¤æ˜“å¼€å§‹æ—¶é—´
 
 		LOGGER.info("Began to call the [" + flowId + "] ...");
 
@@ -61,11 +61,11 @@ public class HeroContainer {
 		{
 			if (null == hFlow)
 			{
-				throw new HException("Ã»ÓĞÕÒµ½FLOW");
+				throw new HException("æ²¡æœ‰æ‰¾åˆ°FLOW");
 			}
 			context.chainedTo(this.flowFactory.getRootContext());
 			hFlow.modeUpdate(context);
-			// 1.0 ·ÃÎÊ¿ØÖÆ
+			// 1.0 è®¿é—®æ§åˆ¶
 			access = this.flowFactory.getAccessManage().checkAccess(context, flowId);
 			if (access)
 			{

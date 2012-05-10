@@ -17,7 +17,7 @@ import cn.com.kk.exception.ObjectNotFoundException;
 
 /**
  * KeyedCollection.java<br>
- * ½á¹¹»¯Êı¾İ¶¨ÒåÊµÏÖÀà£¬Ê¹ÓÃHashMapÀ´´æ·ÅËùÓĞµÄÊı¾İ¶¨Òå
+ * ç»“æ„åŒ–æ•°æ®å®šä¹‰å®ç°ç±»ï¼Œä½¿ç”¨HashMapæ¥å­˜æ”¾æ‰€æœ‰çš„æ•°æ®å®šä¹‰
  * 
  * @author tuqiang<br>
  * @since 2012-4-21<br>
@@ -28,7 +28,7 @@ public class KeyedCollection extends DataElement implements Map {
 	private static final Logger LOGGER = LoggerFactory.getLogger(KeyedCollection.class.getName());
 
 	/**
-	 * @since 2006-09-05 ´æ·ÅµÄËùÓĞÊı¾İÔªËØ
+	 * @since 2006-09-05 å­˜æ”¾çš„æ‰€æœ‰æ•°æ®å…ƒç´ 
 	 */
 	private Map dataElements;
 
@@ -50,7 +50,7 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * È¡Êı¾İ¶¨ÒåµÄÖµ
+	 * å–æ•°æ®å®šä¹‰çš„å€¼
 	 * 
 	 * @param dataName
 	 * @return java.lang.Object
@@ -66,10 +66,10 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * È¡Êı¾İ¶¨ÒåµÄÖµ
+	 * å–æ•°æ®å®šä¹‰çš„å€¼
 	 * 
 	 * @param dataName
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @return java.lang.Object
 	 * @deprecated please use getDataValue
 	 */
@@ -80,10 +80,10 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * Éè¶¨Êı¾İ¶¨ÒåÖµ
+	 * è®¾å®šæ•°æ®å®šä¹‰å€¼
 	 * 
 	 * @param dataName
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @param value
 	 */
 	public void setDataValue(String dataName, Object value) throws InvalidArgumentException, ObjectNotFoundException
@@ -97,7 +97,7 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * Éè¶¨Êı¾İ¶¨ÒåÖµ
+	 * è®¾å®šæ•°æ®å®šä¹‰å€¼
 	 * 
 	 * @param dataName
 	 * @param value
@@ -110,7 +110,7 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * È¡µÚidx¸öÊı¾İÔªËØ
+	 * å–ç¬¬idxä¸ªæ•°æ®å…ƒç´ 
 	 * 
 	 * @param idx
 	 * @return
@@ -126,10 +126,10 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * È¡Êı¾İÔªËØ¶¨Òå
+	 * å–æ•°æ®å…ƒç´ å®šä¹‰
 	 * 
 	 * @param dataName
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @return cn.com.kk.core.DataElement
 	 */
 	public DataElement getDataElement(String dataName) throws InvalidArgumentException
@@ -198,7 +198,7 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * É¾³ıÊı¾İ¶¨Òå
+	 * åˆ é™¤æ•°æ®å®šä¹‰
 	 * 
 	 * @param dataName
 	 * @return cn.com.kk.core.DataElement
@@ -210,10 +210,10 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * É¾³ıÊı¾İ¶¨Òå
+	 * åˆ é™¤æ•°æ®å®šä¹‰
 	 * 
 	 * @param dataName
-	 *            ÔÊĞíÒÔ'.'·Ö¸îµÄ·½Ê½½øĞĞÉî¶È²éÕÒ
+	 *            å…è®¸ä»¥'.'åˆ†å‰²çš„æ–¹å¼è¿›è¡Œæ·±åº¦æŸ¥æ‰¾
 	 * @return
 	 */
 	public DataElement removeDataElement(String dataName)
@@ -275,7 +275,7 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * Ìí¼ÓÊı¾İÔªËØ
+	 * æ·»åŠ æ•°æ®å…ƒç´ 
 	 * 
 	 * @param dataElement
 	 */
@@ -302,7 +302,7 @@ public class KeyedCollection extends DataElement implements Map {
 	}
 
 	/**
-	 * Ìí¼ÓÊı¾İÔªËØ
+	 * æ·»åŠ æ•°æ®å…ƒç´ 
 	 * 
 	 * @param field
 	 * @throws DuplicatedDataNameException

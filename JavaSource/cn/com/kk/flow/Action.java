@@ -5,7 +5,7 @@ import cn.com.kk.exception.HException;
 
 /**
  * Action.java<br>
- * ÒµÎñÂß¼­ÖĞ´¦Àí²½ÖèµÄ½Ó¿Ú¶¨Òå
+ * ä¸šåŠ¡é€»è¾‘ä¸­å¤„ç†æ­¥éª¤çš„æ¥å£å®šä¹‰
  * 
  * @author tuqiang<br>
  * @since 2012-4-24<br>
@@ -14,7 +14,7 @@ import cn.com.kk.exception.HException;
 public interface Action {
 
 	/**
-	 * Âß¼­´¦Àí²½ÖèµØÖ´ĞĞÈë¿Ú
+	 * é€»è¾‘å¤„ç†æ­¥éª¤åœ°æ‰§è¡Œå…¥å£
 	 * 
 	 * @param context
 	 * @return java.lang.String
@@ -22,7 +22,7 @@ public interface Action {
 	public String execute(Context context) throws HException;
 
 	/**
-	 * ·µ»ØÂß¼­´¦Àí²½ÖèµÄÊÂÎñÉùÃ÷
+	 * è¿”å›é€»è¾‘å¤„ç†æ­¥éª¤çš„äº‹åŠ¡å£°æ˜
 	 * 
 	 * @return com.ecc.emp.transaction.EMPTransactionDef
 	 */
@@ -33,7 +33,7 @@ public interface Action {
 	public String getDestAction(Context context, Exception exception);
 
 	/**
-	 * È¡±¨ÎÄ¸ñÊ½¶¨Òå
+	 * å–æŠ¥æ–‡æ ¼å¼å®šä¹‰
 	 * 
 	 * @param fmtId
 	 * @return
@@ -41,14 +41,14 @@ public interface Action {
 //	public FormatElement getFormat(String fmtId);
 
 	/**
-	 * ActionµÄID
+	 * Actionçš„ID
 	 * 
 	 * @return
 	 */
 	public String getName();
 
 	/**
-	 * µÃµ½´ølabelµÄ²½ÖèÈ«Ãû
+	 * å¾—åˆ°å¸¦labelçš„æ­¥éª¤å…¨å
 	 */
 	public String getFullName();
 

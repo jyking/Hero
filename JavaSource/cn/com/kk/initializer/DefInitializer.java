@@ -4,7 +4,7 @@ import cn.com.kk.factory.FlowComponentFactory;
 
 /**
  * DefInitializer.java<br>
- * 默认初始化实现类
+ * 榛樿鍒濆鍖栧疄鐜扮被
  *
  * @author tuqiang<br>
  * @since 2012-5-7<br>

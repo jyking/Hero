@@ -2,7 +2,7 @@ package cn.com.kk.data;
 
 /**
  * DataElement.java<br>
- * 数据元素定义基类
+ * 鏁版嵁鍏冪礌瀹氫箟鍩虹被
  * 
  * @author tuqiang<br>
  * @since 2012-4-20<br>

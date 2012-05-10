@@ -27,7 +27,7 @@ import cn.com.kk.xml.parser.ServiceParser;
 
 /**
  * FlowComponentFactory.java<br>
- * ÒµÎñÂß¼­×é¼ş¹¤³§ÊµÏÖ ÓÃÓÚ´¦ÀíÒµÎñÂß¼­XMLÊµÀı»¯
+ * ä¸šåŠ¡é€»è¾‘ç»„ä»¶å·¥å‚å®ç° ç”¨äºå¤„ç†ä¸šåŠ¡é€»è¾‘XMLå®ä¾‹åŒ–
  * 
  * @author tuqiang<br>
  * @since 2012-4-25<br>
@@ -38,22 +38,22 @@ public class FlowComponentFactory extends ComponentFactory {
 	private static final Logger LOGGER = LoggerFactory.getLogger(FlowComponentFactory.class.getName());
 
 	/**
-	 * FLOW×é¼ş
+	 * FLOWç»„ä»¶
 	 */
 	private Map<String, Flow> flowCache;
 
 	/**
-	 * ¸ù½Úµã
+	 * æ ¹èŠ‚ç‚¹
 	 */
 	private Context rootContext;
 
 	/**
-	 * ·ÃÎÊ¿ØÖÆÆ÷
+	 * è®¿é—®æ§åˆ¶å™¨
 	 */
 	private AccessManager accessManage;
 
 	/**
-	 * ÈİÆ÷³õÊ¼»¯
+	 * å®¹å™¨åˆå§‹åŒ–
 	 */
 	private Initializer initializer;
 
@@ -65,18 +65,18 @@ public class FlowComponentFactory extends ComponentFactory {
 	{
 		this.flowCache = new HashMap<String, Flow>();
 		this.serviceCache = new HashMap<String, Service>();
-		// Ö¸¶¨Ä¬ÈÏ·ÃÎÊ¿ØÖÆÆ÷
+		// æŒ‡å®šé»˜è®¤è®¿é—®æ§åˆ¶å™¨
 		this.accessManage = new DefAccessManager();
-		// Ö¸¶¨Ä¬ÈÏ³õÊ¼»¯Àà
+		// æŒ‡å®šé»˜è®¤åˆå§‹åŒ–ç±»
 		this.initializer = new DefInitializer();
-		// Ö¸¶¨Ä¬ÈÏ½âÎöÆ÷
+		// æŒ‡å®šé»˜è®¤è§£æå™¨
 		this.contextParser = new ContextParser(this);
 		this.flowParser = new FlowParser(this);
 		this.serParser = new ServiceParser(this);
 	}
 
 	/**
-	 * »ñÈ¡FLOWÁ÷³Ì¶ÔÏó Èç¹ûÃ»ÓĞ,Ôò³¢ÊÔÖØĞÂ¼ÓÔØÅäÖÃÎÄ¼ş
+	 * è·å–FLOWæµç¨‹å¯¹è±¡ å¦‚æœæ²¡æœ‰,åˆ™å°è¯•é‡æ–°åŠ è½½é…ç½®æ–‡ä»¶
 	 * 
 	 * @param flowId
 	 * @return
@@ -89,60 +89,60 @@ public class FlowComponentFactory extends ComponentFactory {
 			return flow;
 		}
 		LOGGER.info("Begin to instance Flow [" + flowId + "]...");
-		// Èç¹ûÃ»ÓĞÔò³¢ÊÔÖØĞÂ¼ÓÔØÅäÖÃÎÄ¼ş
+		// å¦‚æœæ²¡æœ‰åˆ™å°è¯•é‡æ–°åŠ è½½é…ç½®æ–‡ä»¶
 		return initFlowCache(flowId);
 	}
 
 	/**
-	 * ³õÊ¼»¯×é¼ş¹¤³§
+	 * åˆå§‹åŒ–ç»„ä»¶å·¥å‚
 	 * 
 	 * @param factoryName
-	 *            ¹¤³§Ãû³Æ
+	 *            å·¥å‚åç§°
 	 * @param fileName
-	 *            ÎÄ¼şÃû³Æ
+	 *            æ–‡ä»¶åç§°
 	 * @throws Exception
 	 */
 	public void initFlowComponentFactory(String factoryName, String fileName) throws Exception
 	{
 		LOGGER.info("Initialize [" + factoryName + "] factory...");
-		// 1.0 ÉèÖÃ¹¤³§Ãû³Æ
+		// 1.0 è®¾ç½®å·¥å‚åç§°
 		this.setName(factoryName);
 
-		// 2.0 ¼ÓÔØÅäÖÃÎÄ¼ş
+		// 2.0 åŠ è½½é…ç½®æ–‡ä»¶
 		String filePath = HTools.Sys.getUserDir() + fileName;
 		LOGGER.info("Loading [" + filePath + "]...");
 		this.loadXML(filePath);
 
-		// ¹¤³§ÅäÖÃ
+		// å·¥å‚é…ç½®
 		Node node = XMLUtil.findElementNode(this.document, factoryName);
-		// 3.0¹¤³§³õÊ¼»¯
+		// 3.0å·¥å‚åˆå§‹åŒ–
 		initFactoryInit(node);
 
-		// 3.2 ·ÃÎÊ¿ØÖÆÆ÷ÊµÏÖÀà
+		// 3.2 è®¿é—®æ§åˆ¶å™¨å®ç°ç±»
 		initFactoryAccess(node);
 
-		// 4.0 ·şÎñ³õÊ¼»¯
+		// 4.0 æœåŠ¡åˆå§‹åŒ–
 		Node sNode = XMLUtil
 				.findElementNode(this.document, HConstants.XML_Factory.NODE_FILEPATH, HConstants.HSettings.SET_SERVER);
 		String serverFile = HTools.Sys.getUserDir() + XMLUtil.getNodeAttributeValue(HConstants.XML_Factory.PROPERTY_VALUE, sNode);
 		LOGGER.info("Loading [" + serverFile + "]...");
 		initServices(serverFile);
 
-		// 5.0 ROOTCONTEXT³õÊ¼»¯
-		// 1.1 ¼ÓÔØÅäÖÃÎÄ¼ş
+		// 5.0 ROOTCONTEXTåˆå§‹åŒ–
+		// 1.1 åŠ è½½é…ç½®æ–‡ä»¶
 		Node dNode = XMLUtil.findElementNode(this.document, HConstants.XML_Factory.NODE_FILEPATH, HConstants.HSettings.SET_DATA);
 		String dataFile = HTools.Sys.getUserDir() + XMLUtil.getNodeAttributeValue(HConstants.XML_Factory.PROPERTY_VALUE, dNode);
 		LOGGER.info("Loading [" + dataFile + "]...");
 		this.createRootContext(factoryName, dataFile);
 
-		// 6.0 µ÷ÓÃ³õÊ¼»¯½Ó¿Ú
+		// 6.0 è°ƒç”¨åˆå§‹åŒ–æ¥å£
 		LOGGER.info("Initialize [" + HConstants.XML_Factory.ID_INIT + "]...");
 		this.initializer.initialize(this);
 		LOGGER.info("Initialize [" + factoryName + "] factory end...");
 	}
 
 	/**
-	 * ³õÊ¼»¯·ÃÎÊ¿ØÖÆÆ÷
+	 * åˆå§‹åŒ–è®¿é—®æ§åˆ¶å™¨
 	 * 
 	 * @param node
 	 */
@@ -163,7 +163,7 @@ public class FlowComponentFactory extends ComponentFactory {
 	}
 
 	/**
-	 * ³õÊ¼»¯ÈİÆ÷³õÊ¼»¯ÊµÏÖÀà
+	 * åˆå§‹åŒ–å®¹å™¨åˆå§‹åŒ–å®ç°ç±»
 	 * 
 	 * @param node
 	 * @throws Exception
@@ -171,7 +171,7 @@ public class FlowComponentFactory extends ComponentFactory {
 	private void initFactoryInit(Node node) throws Exception
 	{
 		LOGGER.info("Loading [" + HConstants.XML_Factory.ID_INIT + "]...");
-		// 3.1 ³ÌĞòÆô¶¯³õÊ¼»¯ÊµÏÖÀà
+		// 3.1 ç¨‹åºå¯åŠ¨åˆå§‹åŒ–å®ç°ç±»
 		Node initNode = XMLUtil.findElementNode(node, HConstants.XML_Factory.ID_INIT);
 		if (null != initNode)
 		{
@@ -185,7 +185,7 @@ public class FlowComponentFactory extends ComponentFactory {
 	}
 
 	/**
-	 * ³õÊ¼»¯FLOW×é¼ş
+	 * åˆå§‹åŒ–FLOWç»„ä»¶
 	 * 
 	 * @param flowFile
 	 * @return
@@ -197,7 +197,7 @@ public class FlowComponentFactory extends ComponentFactory {
 			Flow flow = null;
 			Node node = XMLUtil.findElementNode(this.document, HConstants.XML_Factory.NODE_FILEPATH,
 					HConstants.XML_Factory.ID_OPERATIONS);
-			// »ñÈ¡FLOWÎÄ¼ş
+			// è·å–FLOWæ–‡ä»¶
 			String filePath = HTools.Sys.getUserDir()
 					+ XMLUtil.getNodeAttributeValue(HConstants.XML_Factory.PROPERTY_VALUE, node) + this.getName()
 					+ HTools.Sys.getFileSeparator() + flowId + ".xml";
@@ -216,7 +216,7 @@ public class FlowComponentFactory extends ComponentFactory {
 	}
 
 	/**
-	 * ³õÊ¼»¯services
+	 * åˆå§‹åŒ–services
 	 * 
 	 * @param serviceCache2
 	 * @param serverFile
@@ -226,7 +226,7 @@ public class FlowComponentFactory extends ComponentFactory {
 	{
 		XMLDocumentLoader loader = new XMLDocumentLoader();
 		Document doc = loader.loadXMLDocument(serverFile);
-		// 1.0 È¡µÃSERVERÅäÖÃ
+		// 1.0 å–å¾—SERVERé…ç½®
 		NodeList nodeList = doc.getChildNodes();
 		NodeList nList = nodeList.item(0).getChildNodes();
 		for (int i = 0; i < nList.getLength(); i++)
@@ -242,7 +242,7 @@ public class FlowComponentFactory extends ComponentFactory {
 	}
 
 	/**
-	 * ´´½¨ROOTCONTEXT
+	 * åˆ›å»ºROOTCONTEXT
 	 * 
 	 * @param id
 	 * @param fileName
@@ -252,7 +252,7 @@ public class FlowComponentFactory extends ComponentFactory {
 	{
 		XMLDocumentLoader loader = new XMLDocumentLoader();
 		Document doc = loader.loadXMLDocument(fileName);
-		// 1.0 È¡µÃcontextÅäÖÃ
+		// 1.0 å–å¾—contexté…ç½®
 		Node node = XMLUtil.findElementNode(doc, HConstants.XML_Context.NODE_DATA, id);
 
 		if (null != node)

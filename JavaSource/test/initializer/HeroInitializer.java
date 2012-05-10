@@ -5,7 +5,7 @@ import cn.com.kk.initializer.Initializer;
 
 /**
  * HeroInitializer.java<br>
- * ²âÊÔÀà
+ * æµ‹è¯•ç±»
  *
  * @author tuqiang<br>
  * @since 2012-5-9<br>

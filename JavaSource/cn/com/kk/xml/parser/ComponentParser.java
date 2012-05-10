@@ -13,7 +13,7 @@ import cn.com.kk.factory.ComponentFactory;
 
 /**
  * ComponentParser.java<br>
- * ×é¼ş½âÎöÆ÷ ¸ºÔğ½«XML×é×°ÎªJAVA BEAN
+ * ç»„ä»¶è§£æå™¨ è´Ÿè´£å°†XMLç»„è£…ä¸ºJAVA BEAN
  * 
  * @author tuqiang<br>
  * @since 2012-5-9<br>
@@ -31,7 +31,7 @@ public abstract class ComponentParser {
 	}
 
 	/**
-	 * ½«elementNode ÊµÀı»¯ÎªJAVA BEAN
+	 * å°†elementNode å®ä¾‹åŒ–ä¸ºJAVA BEAN
 	 * 
 	 * @param document
 	 * @param elementNode
@@ -41,7 +41,7 @@ public abstract class ComponentParser {
 	public abstract Object parseTheElement(Node elementNode) throws Exception;
 
 	/**
-	 * ½«elementNodeÖĞ¶¨ÒåµÄAttributesÉè¶¨µ½beanÖĞ
+	 * å°†elementNodeä¸­å®šä¹‰çš„Attributesè®¾å®šåˆ°beanä¸­
 	 * 
 	 * @param bean
 	 * @param elementNode
@@ -50,7 +50,7 @@ public abstract class ComponentParser {
 	{
 		NamedNodeMap attrs = elementNode.getAttributes();
 
-		// Öğ¸ö²éÕÒsetter ·½·¨Éè¶¨BeanµÄÊôĞÔÖµ
+		// é€ä¸ªæŸ¥æ‰¾setter æ–¹æ³•è®¾å®šBeançš„å±æ€§å€¼
 		for (int i = 0; i < attrs.getLength(); i++)
 		{
 			Node attr = attrs.item(i);
@@ -66,7 +66,7 @@ public abstract class ComponentParser {
 	}
 
 	/**
-	 * ÅĞ¶ÏÊôĞÔÃû³ÆÊÇ·ñÎªÄÚ²¿Ê¹ÓÃµÄÊôĞÔ
+	 * åˆ¤æ–­å±æ€§åç§°æ˜¯å¦ä¸ºå†…éƒ¨ä½¿ç”¨çš„å±æ€§
 	 * 
 	 * @param name
 	 * @return
@@ -74,7 +74,7 @@ public abstract class ComponentParser {
 	protected abstract boolean isInnerAttribute(String name);
 
 	/**
-	 * ²éÕÒBeanµÄÏàÓ¦µÄSetter·½·¨£¬½«ValueÍ¨¹ıÏàÓ¦µÄPropertyConverter×ª»¯µ½ÊÊµ±µÄÀàĞÍ£¬ Éè¶¨µ½BeanÖĞ
+	 * æŸ¥æ‰¾Beançš„ç›¸åº”çš„Setteræ–¹æ³•ï¼Œå°†Valueé€šè¿‡ç›¸åº”çš„PropertyConverterè½¬åŒ–åˆ°é€‚å½“çš„ç±»å‹ï¼Œ è®¾å®šåˆ°Beanä¸­
 	 * 
 	 * @param bean
 	 * @param name
@@ -83,7 +83,7 @@ public abstract class ComponentParser {
 	protected void setBeanProperty(Object bean, String name, Object value)
 	{
 		String methodName = "set" + name.substring(0, 1).toUpperCase() + name.substring(1);
-		// ³¢ÊÔÒÔString×÷ÎªÈë²ÎÉèÖÃ
+		// å°è¯•ä»¥Stringä½œä¸ºå…¥å‚è®¾ç½®
 		try
 		{
 			Method setterMethod = bean.getClass().getMethod(methodName, new Class[]
@@ -100,7 +100,7 @@ public abstract class ComponentParser {
 			LOGGER.error("Invok bean " + bean.getClass().getName() + " 's methos " + methodName + " with " + value + "failed!", e);
 		}
 
-		// ½«ValueÍ¨¹ıÏàÓ¦µÄPropertyConverter×ª»¯µ½ÊÊµ±µÄÀàĞÍÉèÖÃ
+		// å°†Valueé€šè¿‡ç›¸åº”çš„PropertyConverterè½¬åŒ–åˆ°é€‚å½“çš„ç±»å‹è®¾ç½®
 		try
 		{
 			Method[] methods = bean.getClass().getMethods();
@@ -109,7 +109,7 @@ public abstract class ComponentParser {
 				if (methods[i].getName().equals(methodName))
 				{
 					Class<?>[] parameterTypes = methods[i].getParameterTypes();
-					// SET·½·¨²ÎÊıÖ»ÄÜÓĞÒ»¸ö
+					// SETæ–¹æ³•å‚æ•°åªèƒ½æœ‰ä¸€ä¸ª
 					if (parameterTypes.length != 1)
 					{
 						continue;

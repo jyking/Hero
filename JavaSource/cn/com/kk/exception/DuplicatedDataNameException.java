@@ -2,7 +2,7 @@ package cn.com.kk.exception;
 
 /**
  * DuplicatedDataNameException.java<br>
- * Êı¾İ¶¨ÒåÃûÖØ¸´Òì³£
+ * æ•°æ®å®šä¹‰åé‡å¤å¼‚å¸¸
  * 
  * @author tuqiang<br>
  * @since 2012-4-20<br>

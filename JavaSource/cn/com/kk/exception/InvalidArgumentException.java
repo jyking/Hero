@@ -2,7 +2,7 @@ package cn.com.kk.exception;
 
 /**
  * InvalidArgumentException.java<br>
- * 非法参数异常定义
+ * 闈炴硶鍙傛暟寮傚父瀹氫箟
  * 
  * @author tuqiang<br>
  * @since 2012-4-20<br>
